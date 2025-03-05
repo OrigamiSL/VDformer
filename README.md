@@ -61,7 +61,7 @@ The folder tree in https://drive.google.com/drive/folders/1ZOYpTUa82_jCcxIdTmyr0
 
 To standardize the data format, we convert the data file of [Solar](https://drive.google.com/drive/folders/1Gv1MXjLo5bLGep4bsqDyaNMI2oQC9GH2?usp=sharing) from 'solar_AL.txt' to 'solar_AL.csv'. Then we compress this file and upload it to the folder `./data/Solar`, where you can get the data file by simply unzipping the 'solar_AL.zip' file.
 
-We preprocess Air/River in [Air](https://archive.ics.uci.edu/dataset/360/air+quality) /[River](https://www.kaggle.com/datasets/samanemami/river-flowrf2) /[BTC](https://www.kaggle.com/datasets/prasoonkottarathil/btcinusd) /[ETH](https://www.kaggle.com/datasets/franoisgeorgesjulien/crypto) (the folder tree in the link is shown as below) and put the data files into the folder `./data/Air`/`./data/River` respectively. 
+We preprocess Air/River in [Air](https://archive.ics.uci.edu/dataset/360/air+quality) /[River](https://www.kaggle.com/datasets/samanemami/river-flowrf2) (the folder tree in the link is shown as below) and put the data files into the folder `./data/Air`/`./data/River` respectively. 
 
 ```
 The folder tree in https://archive.ics.uci.edu/dataset/360/air+quality:
@@ -138,7 +138,6 @@ Here we provide a more detailed and complete command description for training an
 |    dropout     |     Dropout      |
 | encoder_layer  | The number of encoder layers |
 |   patch_size   | The size of each patch |
-|     Cross      | Whether to use cross-variable attention |
 |      EMD       | Whether to use EMD as the prediction initialization |
 |      itr       |Experiments times |
 |  train_epochs  |  Train epochs of the second stage  |
@@ -148,27 +147,24 @@ Here we provide a more detailed and complete command description for training an
 
 
 ## Results
-The experiment parameters of each data set are formated in the `Main.sh` and `Univariate_ECL.sh` files in the directory `./scripts/`. You can refer to these parameters for experiments, and you can also adjust the parameters to obtain better MSE and MAE results or draw better prediction figures. 
+The experiment parameters of each data set are formated in the `Main.sh` file in the directory `./scripts/`. You can refer to these parameters for experiments, and you can also adjust the parameters to obtain better MSE and MAE results or draw better prediction figures. 
 
-We provide the results of EMD process in the link [EMD](https://drive.google.com/file/d/1fzG7bz3vYIgsbDIykhn8FrZ88slcfuKO/view?usp=sharing). You can download and place it in corresponding folders at `./FPPformerV2/EMD` to reduce the time consumption.
+We provide the results of EMD process in the link [EMD](https://drive.google.com/file/d/1fzG7bz3vYIgsbDIykhn8FrZ88slcfuKO/view?usp=sharing). You can download and place it in corresponding folders at `./VDformer/EMD` to reduce the time consumption. 
+
+The Multivariate forecasting results of VDformer and other seven baselines are shown in Figure 2 and Figure 3.
 
 <p align="center">
-<img src="./img/Multivariate_hour.png" height = "700" alt="" align=center />
+<img src="./img/Multivariate_hour.jpg" height = "700" alt="" align=center />
 <br><br>
 <b>Figure 2.</b> Multivariate forecasting results under 1-hour-level datasets
 </p>
 
 <p align="center">
-<img src="./img/Multivariate_min.png" height = "500" alt="" align=center />
+<img src="./img/Multivariate_min.jpg" height = "500" alt="" align=center />
 <br><br>
 <b>Figure 3.</b> Multivariate forecasting results under minute-level datasets
 </p>
 
-<p align="center">
-<img src="./img/Univariate.png" height = "500" alt="" align=center />
-<br><br>
-<b>Figure 4.</b> Univariate forecasting results
-</p>
 
 
 ## Contact
