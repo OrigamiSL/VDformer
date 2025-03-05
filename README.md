@@ -134,18 +134,12 @@ Commands for training and testing VDformer of all datasets are in `./scripts/Mai
 
 More parameter information please refer to `main.py`.
 
-We provide a complete command for training and testing FPPformerV2:
-
-For multivariate forecasting:
+We provide a complete command for training and testing VDformer:
 
 ```
-python -u main.py --data <data> --features <features> --input_len <input_len> --pred_len <pred_len> --encoder_layer <encoder_layer> --patch_size <patch_size> --d_model <d_model> --learning_rate <learning_rate> --dropout <dropout> --batch_size <batch_size> --train_epochs <train_epochs> --patience <patience> --itr <itr> --train --Cross <Cross> --EMD <EMD>
+python -u main.py --data <data> --features <features> --input_len <input_len> --pred_len <pred_len> --encoder_layer <encoder_layer> --patch_size <patch_size> --d_model <d_model> --learning_rate <learning_rate> --dropout <dropout> --batch_size <batch_size> --train_epochs <train_epochs> --patience <patience> --itr <itr> --train --EMD <EMD>
 ```
-For univariate forecasting:
 
-```
-python -u main.py --data <data> --features <features> --input_len <input_len> --pred_len <pred_len> --encoder_layer <encoder_layer> --patch_size <patch_size> --d_model <d_model> --learning_rate <learning_rate> --dropout <dropout> --batch_size <batch_size> --train_epochs <train_epochs> --patience <patience> --itr <itr> --train --target <target> --EMD <EMD>
-```
 
 Here we provide a more detailed and complete command description for training and testing the model:
 
