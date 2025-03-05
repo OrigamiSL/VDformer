@@ -154,7 +154,7 @@ We provide the results of EMD process in the link [EMD](https://drive.google.com
 The Multivariate forecasting results of VDformer and other seven baselines are shown in Figure 2 and Figure 3.
 
 <p align="center">
-<img src="./img/Multivariate_hour.jpg" height = "700" alt="" align=center />
+<img src="./img/Multivariate_hour.jpg" height = "600" alt="" align=center />
 <br><br>
 <b>Figure 2.</b> Multivariate forecasting results under 1-hour-level datasets
 </p>
