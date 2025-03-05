@@ -7,7 +7,7 @@ import shutil
 from utils.metrics import metric
 from exp.exp_model import Exp_Model
 
-parser = argparse.ArgumentParser(description='FPPformerV2')
+parser = argparse.ArgumentParser(description='VDformer')
 
 parser.add_argument('--data', type=str, required=True, default='ETTh1', help='data')
 parser.add_argument('--root_path', type=str, default='./data/ETT/', help='root path of the data file')
