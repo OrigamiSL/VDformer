@@ -3,7 +3,7 @@
 ![PyTorch 2.1.0](https://img.shields.io/badge/PyTorch%20-%23EE4C2C.svg?style=plastic)
 ![License CC BY-NC-SA](https://img.shields.io/badge/license-CC_BY--NC--SA--green.svg?style=plastic)
 
-This is the origin Pytorch implementation of FPPformerV2 in the following paper: 
+This is the original Pytorch implementation of FPPformerV2 in the following paper: 
 [Variable-Dynamic Multivariate Time Series Forecasting for IoT Systems] (Manuscript submitted to IEEE IOTJ).
 
 ## Model Architecture
