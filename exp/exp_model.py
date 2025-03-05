@@ -32,12 +32,12 @@ class Exp_Model(Exp_Basic):
             self.args.dropout
         ).float()
 
-        input_x = torch.randn(1, self.args.input_len, self.args.enc_in)
-        pred_x = torch.randn(1, self.args.pred_len[-1], self.args.enc_in)
-        var_x = torch.zeros([1, self.args.enc_in, self.args.enc_in]).bool()
-        flops, params = profile(model, inputs=(input_x, pred_x, var_x))
-        flops, params = clever_format([flops, params], '%.3f')
-        print(f"flops：{flops}, params：{params}")
+        # input_x = torch.randn(1, self.args.input_len, self.args.enc_in)
+        # pred_x = torch.randn(1, self.args.pred_len[-1], self.args.enc_in)
+        # var_x = torch.zeros([1, self.args.enc_in, self.args.enc_in]).bool()
+        # flops, params = profile(model, inputs=(input_x, pred_x, var_x))
+        # flops, params = clever_format([flops, params], '%.3f')
+        # print(f"flops：{flops}, params：{params}")
 
         if self.args.use_multi_gpu and self.args.use_gpu:
             model = nn.DataParallel(model, device_ids=self.args.device_ids)
