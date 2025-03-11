@@ -61,7 +61,7 @@ The folder tree in https://drive.google.com/drive/folders/1ZOYpTUa82_jCcxIdTmyr0
 
 To standardize the data format, we convert the data file of [Solar](https://drive.google.com/drive/folders/1Gv1MXjLo5bLGep4bsqDyaNMI2oQC9GH2?usp=sharing) from 'solar_AL.txt' to 'solar_AL.csv'. Then we compress this file and upload it to the folder `./data/Solar`, where you can get the data file by simply unzipping the 'solar_AL.zip' file.
 
-We preprocess Air/River in [Air](https://archive.ics.uci.edu/dataset/360/air+quality) /[River](https://www.kaggle.com/datasets/samanemami/river-flowrf2) (the folder tree in the link is shown as below) and put the data files into the folder `./data/Air`/`./data/River` respectively. (Attention! If you directly use the preprocessed datasets provided in this repository, there is no need to run `./data/preprocess.py`, otherwise errors would occur.)
+We preprocess Air/River in [Air](https://archive.ics.uci.edu/dataset/360/air+quality) /[River](https://www.kaggle.com/datasets/samanemami/river-flowrf2) (the folder tree in the link is shown as below) and put the data files into the folder `./data/Air`/`./data/River` respectively. (You can run `./data/preprocess.py` to preprocess the raw data of Air and River datasets. Attention! If you directly use the preprocessed datasets provided in this repository, there is no need to run `./data/preprocess.py`, otherwise errors would occur.)
 
 In 'preprocess.py', We replace the missing values, which are tagged with -200 value, by the average values of normal ones. We remove the variable `NMHC(GT)` in Air dataset in that all data of this variable in test subset is missing. In River dataset, we only select the first eight variables as others are corresponding time-lagged observationst.
 
