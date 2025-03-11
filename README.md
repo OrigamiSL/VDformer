@@ -34,7 +34,7 @@ pip install -r requirements.txt
 
 ## Data
 
-ETT, ECL, Traffic and Weather dataset were acquired at: [here](https://drive.google.com/drive/folders/1ZOYpTUa82_jCcxIdTmyr0LXQfvaM9vIy?usp=sharing). Solar dataset was acquired at: [Solar](https://drive.google.com/drive/folders/1Gv1MXjLo5bLGep4bsqDyaNMI2oQC9GH2?usp=sharing). The raw data of Air dataset was acquired at: [Air](https://archive.ics.uci.edu/dataset/360/air+quality). The raw data of River dataset was acquired at: [River](https://www.kaggle.com/datasets/samanemami/river-flowrf2). The raw data of HomeC dataset was acquired at: [HomeC](https://www.kaggle.com/datasets/taranvee/smart-home-dataset-with-weather-information).
+ETT, ECL, Traffic and Weather dataset were acquired at: [here](https://drive.google.com/drive/folders/1ZOYpTUa82_jCcxIdTmyr0LXQfvaM9vIy?usp=sharing). Solar dataset was acquired at: [Solar](https://drive.google.com/drive/folders/1Gv1MXjLo5bLGep4bsqDyaNMI2oQC9GH2?usp=sharing). The raw data of Air dataset was acquired at: [Air](https://archive.ics.uci.edu/dataset/360/air+quality). The raw data of River dataset was acquired at: [River](https://www.kaggle.com/datasets/samanemami/river-flowrf2). The raw data of HomeC dataset was acquired at: [HomeC](https://www.kaggle.com/datasets/taranvee/smart-home-dataset-with-weather-information). The Air and River datasets shall be used after proper data preparation so that they have already been arranged in this repository. One can also use the preprocessing program provided (expounded in the later section) to preprocess the last four datasets if he/she is interested in the raw data of them.
 ### Data Preparation
 After you acquire raw data of all datasets, please separately place them in corresponding folders at `./data`. 
 
