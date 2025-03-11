@@ -34,7 +34,7 @@ pip install -r requirements.txt
 
 ## Data
 
-ETT, ECL, Traffic and Weather dataset were acquired at: [here](https://drive.google.com/drive/folders/1ZOYpTUa82_jCcxIdTmyr0LXQfvaM9vIy?usp=sharing). Solar dataset was acquired at: [Solar](https://drive.google.com/drive/folders/1Gv1MXjLo5bLGep4bsqDyaNMI2oQC9GH2?usp=sharing). The raw data of Air dataset was acquired at: [Air](https://archive.ics.uci.edu/dataset/360/air+quality). The raw data of River dataset was acquired at: [River](https://www.kaggle.com/datasets/samanemami/river-flowrf2). The raw data of HomeC dataset was acquired at: [HomeC](https://www.kaggle.com/datasets/taranvee/smart-home-dataset-with-weather-information). The Air and River datasets shall be used after proper data preparation so that they have already been arranged in this repository. One can also use the preprocessing program provided (expounded in the later section) to preprocess the last four datasets if he/she is interested in the raw data of them.
+ETT, ECL, Traffic and Weather dataset were acquired at: [here](https://drive.google.com/drive/folders/1ZOYpTUa82_jCcxIdTmyr0LXQfvaM9vIy?usp=sharing). Solar dataset was acquired at: [Solar](https://drive.google.com/drive/folders/1Gv1MXjLo5bLGep4bsqDyaNMI2oQC9GH2?usp=sharing). The raw data of Air dataset was acquired at: [Air](https://archive.ics.uci.edu/dataset/360/air+quality). The raw data of River dataset was acquired at: [River](https://www.kaggle.com/datasets/samanemami/river-flowrf2). The raw data of HomeC dataset was acquired at: [HomeC](https://www.kaggle.com/datasets/taranvee/smart-home-dataset-with-weather-information). The Air and River datasets shall be used after proper data preparation so that they have already been arranged in this repository. One can also use the preprocessing program provided (expounded in the later section) to preprocess the Air and River datasets if he/she is interested in the raw data of them.
 ### Data Preparation
 After you acquire raw data of all datasets, please separately place them in corresponding folders at `./data`. 
 
@@ -61,7 +61,9 @@ The folder tree in https://drive.google.com/drive/folders/1ZOYpTUa82_jCcxIdTmyr0
 
 To standardize the data format, we convert the data file of [Solar](https://drive.google.com/drive/folders/1Gv1MXjLo5bLGep4bsqDyaNMI2oQC9GH2?usp=sharing) from 'solar_AL.txt' to 'solar_AL.csv'. Then we compress this file and upload it to the folder `./data/Solar`, where you can get the data file by simply unzipping the 'solar_AL.zip' file.
 
-We preprocess Air/River in [Air](https://archive.ics.uci.edu/dataset/360/air+quality) /[River](https://www.kaggle.com/datasets/samanemami/river-flowrf2) (the folder tree in the link is shown as below) and put the data files into the folder `./data/Air`/`./data/River` respectively. 
+We preprocess Air/River in [Air](https://archive.ics.uci.edu/dataset/360/air+quality) /[River](https://www.kaggle.com/datasets/samanemami/river-flowrf2) (the folder tree in the link is shown as below) and put the data files into the folder `./data/Air`/`./data/River` respectively. (Attention! If you directly use the preprocessed datasets provided in this repository, there is no need to run `./data/preprocess.py`, otherwise errors would occur.)
+
+In 'preprocess.py', We replace the missing values, which are tagged with -200 value, by the average values of normal ones. We remove the variable `NMHC(GT)` in Air dataset in that all data of this variable in test subset is missing. In River dataset, we only select the first eight variables as others are corresponding time-lagged observationst.
 
 ```
 The folder tree in https://archive.ics.uci.edu/dataset/360/air+quality:
@@ -73,7 +75,7 @@ The folder tree in https://www.kaggle.com/datasets/samanemami/river-flowrf2:
 |-river-flowrf2
 | |-RF2.csv
 ```
-The data of HomeC is sampled so that the interval is 15 minutes to align with the settings of other minute-level datasets. You can find the preprocessed dataset at `.data/HomeC/HomeC.csv`.
+The data of HomeC is sampled so that the interval is 15 minutes to align with the settings of other minute-level datasets. You can find the preprocessed dataset at `./data/HomeC/HomeC.csv`.
 
 After you finish the above operations, you will obtain the folder tree below:
 ```
